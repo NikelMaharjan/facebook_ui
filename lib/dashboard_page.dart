@@ -13,101 +13,103 @@ class DashBoardPage extends StatelessWidget {
         body: SafeArea(
           child: DefaultTabController(
             length: 4,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Padding(
-                  padding:  EdgeInsets.symmetric(horizontal: 12.0, vertical: 8),
-                  child: Row(
-                    //crossAxisAlignment: CrossAxisAlignment.start,
-                    // mainAxisAlignment: MainAxisAlignment.start,
-                    children:  [
-                      Expanded(
-                        child: Text(
-                          "facebook",
-                          style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold, color: Color(0xff1878F3)),
-                        ),
-                      ),
-                      FloatingActionButton.small(
-                        elevation: 0,
-                          backgroundColor: Color(0xffF1F2F5),
-                          child: Icon(Icons.add, color: Colors.black, size: 30,),
-                          onPressed: (){}
-                      ),
+            child: NestedScrollView(
+                headerSliverBuilder: (BuildContext context,
+                    bool innerBoxScrolled) {
+                  return [_buildHeader(context, innerBoxScrolled)];
+                },
 
-                      FloatingActionButton.small(
-                          elevation: 0,
-                          backgroundColor: Color(0xffF1F2F5),
-                          child: Icon(Icons.search, color: Colors.black, size: 30,),
-                          onPressed: (){}
-                      ),
-                      FloatingActionButton.small(
-                          elevation: 0,
-                          backgroundColor: Color(0xffF1F2F5),
-                          child: Icon(Icons.message, color: Colors.black, size: 30,),
-                          onPressed: (){}
-                      ),
-                    ],
-                  ),
-                ),
+                body: _buildTabBarView(context)
 
-                Container(
-                  child: TabBar(
-                    indicatorColor: blue,
-                    unselectedLabelColor: Colors.black54,
-                    labelColor: blue,
-
-
-
-
-
-
-                    tabs: [
-
-                      Tab(
-                        icon: Icon(Icons.home,size: 30,),
-                      ),
-                      Tab(
-                        icon: Icon(Icons.video_collection_outlined,size: 30,),
-                      ),
-                      Tab(
-                        icon: Icon(Icons.notifications_none_outlined,size: 30,),
-                      ),
-                      Tab(
-                        icon: Icon(Icons.list,size: 30,),
-                      ),
-
-                    ],
-                  ),
-                ),
-                Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
-                      child: TabBarView(
-                        physics: NeverScrollableScrollPhysics(),
-                        children: [
-
-
-                          HomePage(),
-
-                          Center(child: Container(child: Text("Nikel Maharajan"),)),
-                          Center(child: Container(child: Text("Nikel Maharajan"),)),
-
-                          ProfilePage(),
-
-
-
-                        ],
-                      ),
-                    )
-                )
-
-              ],
             ),
           ),
         )
     );
   }
 
+  Widget _buildHeader(BuildContext context, bool innerBoxScrolled) {
+    return SliverAppBar(
+      floating: true,
+      pinned: true,
+      elevation: 1,
+      backgroundColor: Colors.white,
+      forceElevated: innerBoxScrolled,
+      title: Padding(
+        padding: EdgeInsets.symmetric(vertical: 8),
+        child: Row(
+          //crossAxisAlignment: CrossAxisAlignment.start,
+          // mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Expanded(
+              child: Text(
+                "facebook",
+                style: TextStyle(fontSize: 36,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xff1878F3)),
+              ),
+            ),
+            FloatingActionButton.small(
+                elevation: 0,
+                backgroundColor: Color(0xffF1F2F5),
+                child: Icon(Icons.add, color: Colors.black, size: 30,),
+                onPressed: () {}
+            ),
+
+            FloatingActionButton.small(
+                elevation: 0,
+                backgroundColor: Color(0xffF1F2F5),
+                child: Icon(Icons.search, color: Colors.black, size: 30,),
+                onPressed: () {}
+            ),
+            FloatingActionButton.small(
+                elevation: 0,
+                backgroundColor: Color(0xffF1F2F5),
+                child: Icon(Icons.message, color: Colors.black, size: 30,),
+                onPressed: () {}
+            ),
+          ],
+        ),
+      ),
+      bottom: TabBar(
+        indicatorColor: blue,
+        unselectedLabelColor: Colors.black54,
+        labelColor: blue,
+
+
+        tabs: [
+
+          Tab(
+            icon: Icon(Icons.home, size: 30,),
+          ),
+          Tab(
+            icon: Icon(Icons.video_collection_outlined, size: 30,),
+          ),
+          Tab(
+            icon: Icon(Icons.notifications_none_outlined, size: 30,),
+          ),
+          Tab(
+            icon: Icon(Icons.list, size: 30,),
+          ),
+
+        ],
+      ),
+    );
+  }
+
+
+  Widget _buildTabBarView(BuildContext context) {
+    return TabBarView(
+      children: [
+
+        HomePage(),
+        Center(
+          child: Text("Nikel Maharjan"),
+        ),
+        Center(
+          child: Text("Nikel Maharjan"),
+        ),
+        ProfilePage(),
+      ],
+    );
+  }
 }
