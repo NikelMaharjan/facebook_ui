@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practice/colors.dart';
 import 'package:practice/views/home_page.dart';
+import 'package:practice/views/notification_page.dart';
 import 'package:practice/views/profile_page.dart';
 
 class DashBoardPage extends StatelessWidget {
@@ -105,9 +106,7 @@ class DashBoardPage extends StatelessWidget {
         Center(
           child: Text("Nikel Maharjan"),
         ),
-        Center(
-          child: Text("Nikel Maharjan"),
-        ),
+        NotificationPage(),
         ProfilePage(),
       ],
     );
