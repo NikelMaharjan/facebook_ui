@@ -58,9 +58,11 @@ class NotificationPage extends StatelessWidget {
               ),
 
 
+
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const SizedBox(width: 10,),
                   const CircleAvatar(
                     backgroundColor: Colors.grey,
                     radius: 28,
@@ -111,6 +113,8 @@ class NotificationPage extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const SizedBox(width: 10,),
+
                   const CircleAvatar(
                     backgroundColor: Colors.grey,
                     radius: 28,
@@ -202,7 +206,7 @@ class NotificationPage extends StatelessWidget {
       color: color,
                 height: 80,
                 child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
                   child: Row(
                     children: [
                       const CircleAvatar(

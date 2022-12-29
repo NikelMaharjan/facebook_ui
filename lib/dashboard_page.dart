@@ -3,6 +3,7 @@ import 'package:practice/colors.dart';
 import 'package:practice/views/home_page.dart';
 import 'package:practice/views/notification_page.dart';
 import 'package:practice/views/profile_page.dart';
+import 'package:practice/views/video_page.dart';
 
 class DashBoardPage extends StatelessWidget {
   const DashBoardPage({Key? key}) : super(key: key);
@@ -15,8 +16,7 @@ class DashBoardPage extends StatelessWidget {
           child: DefaultTabController(
             length: 4,
             child: NestedScrollView(
-                headerSliverBuilder: (BuildContext context,
-                    bool innerBoxScrolled) {
+                headerSliverBuilder: (BuildContext context, bool innerBoxScrolled) {
                   return [_buildHeader(context, innerBoxScrolled)];
                 },
 
@@ -103,9 +103,9 @@ class DashBoardPage extends StatelessWidget {
       children: [
 
         HomePage(),
-        Center(
-          child: Text("Nikel Maharjan"),
-        ),
+
+        VideoPage(),
+
         NotificationPage(),
         ProfilePage(),
       ],
