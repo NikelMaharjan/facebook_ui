@@ -11,6 +11,7 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(0xffF1F2F5),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: SingleChildScrollView(
@@ -26,13 +27,13 @@ class ProfilePage extends StatelessWidget {
                     FloatingActionButton.small(
                         onPressed: (){},
                       elevation: 0,
-                      backgroundColor: grey,
+                      backgroundColor: iconColor,
                       child: Icon(Icons.settings, color: Colors.black,),
                     ),
                     FloatingActionButton.small(
                       onPressed: (){},
                       elevation: 0,
-                      backgroundColor: grey,
+                      backgroundColor: iconColor,
                       child: Icon(Icons.search, color: Colors.black,),
                     )
                   ],
@@ -75,196 +76,11 @@ class ProfilePage extends StatelessWidget {
                   margin: EdgeInsets.symmetric(vertical: 10),
                     child: Text("All Shortcuts", style: TextStyle(fontWeight: FontWeight.w600),)),
 
-                Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        height: 100,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(Icons.dynamic_feed_sharp, color: Colors.blue, size: 28,),
-                              SizedBox(height: 8,),
-                              Text("Feeds", style: TextStyle(fontWeight: FontWeight.w600),),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 100,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(Icons.people, color: Colors.blue, size: 28,),
-                              SizedBox(height: 8,),
-                              Text("Friends", style: TextStyle(fontWeight: FontWeight.w600),),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        height: 100,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(Icons.groups_outlined, color: Colors.blue,size: 26,),
-                              SizedBox(height: 8,),
-                              Text("Groups", style: TextStyle(fontWeight: FontWeight.w600),),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+                _buildShortcuts(icon1: Icons.dynamic_feed_sharp, text1: "Feeds", icon2: Icons.people, text2: "Friends" ),
+                _buildShortcuts(icon1: Icons.groups_outlined, text1: "Groups", icon2: Icons.shop, text2: "Marketpace"),
+                _buildShortcuts(icon1: Icons.video_collection, text1: "Video on Watch", icon2: Icons.timelapse, text2: "Memories"),
+                _buildShortcuts(icon1: Icons.save_alt, text1: "Saved", icon2: Icons.flag, text2: "Pages"),
 
-                    Expanded(
-                      child: Container(
-                        height: 100,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(Icons.shop, color: Colors.blue, size: 26,),
-                              SizedBox(height: 8,),
-                              Text("Marketplace", style: TextStyle(fontWeight: FontWeight.w600),),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-
-
-
-                  ],
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        height: 100,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(Icons.video_collection, color: Colors.blue,size: 26,),
-                              SizedBox(height: 8,),
-                              Text("Videos on watch", style: TextStyle(fontWeight: FontWeight.w600),),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    Expanded(
-                      child: Container(
-                        height: 100,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(Icons.timer, color: Colors.blue, size: 26,),
-                              SizedBox(height: 8,),
-                              Text("Memeories", style: TextStyle(fontWeight: FontWeight.w600),),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-
-
-
-                  ],
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        height: 100,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(Icons.save_alt, color: Colors.blue,size: 26,),
-                              SizedBox(height: 8,),
-                              Text("Saved", style: TextStyle(fontWeight: FontWeight.w600),),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    Expanded(
-                      child: Container(
-                        height: 100,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(Icons.flag, color: Colors.blue, size: 26,),
-                              SizedBox(height: 8,),
-                              Text("Pages", style: TextStyle(fontWeight: FontWeight.w600),),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-
-
-
-
-
-                  ],
-                ),
 
 
                 Container(
@@ -333,5 +149,58 @@ class ProfilePage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Widget _buildShortcuts({required String text1, required IconData icon1, required text2, required IconData icon2 }) {
+    return Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      height: 90,
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        elevation: 4,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 18.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Icon(icon1, color: Colors.blue, size: 28,),
+                              SizedBox(height: 8,),
+                              Text(text1, style: TextStyle(fontWeight: FontWeight.w600),),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      height: 90,
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        elevation: 4,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 18.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Icon(icon2, color: Colors.blue, size: 28,),
+                              SizedBox(height: 8,),
+                              Text(text2, style: TextStyle(fontWeight: FontWeight.w600),),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              );
   }
 }

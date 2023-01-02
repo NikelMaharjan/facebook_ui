@@ -25,7 +25,7 @@ class NotificationPage extends StatelessWidget {
                     FloatingActionButton.small(
                       onPressed: (){},
                       elevation: 0,
-                      backgroundColor: grey,
+                      backgroundColor: iconColor,
                       child: const Icon(Icons.search, color: Colors.black,),
                     )
                   ],
@@ -96,7 +96,7 @@ class NotificationPage extends StatelessWidget {
                                 style: ElevatedButton.styleFrom(
                                     backgroundColor: const Color(0xffE5E6EC)
                                 ),
-                                onPressed: (){}, child: const Text("Add friend", style: TextStyle(color: Colors.black),)),
+                                onPressed: (){}, child: const Text("Remove", style: TextStyle(color: Colors.black),)),
                           )
                         ],
                       )
@@ -148,7 +148,7 @@ class NotificationPage extends StatelessWidget {
                                 style: ElevatedButton.styleFrom(
                                     backgroundColor: const Color(0xffE5E6EC)
                                 ),
-                                onPressed: (){}, child: const Text("Add friend", style: TextStyle(color: Colors.black),)),
+                                onPressed: (){}, child: const Text("Remove", style: TextStyle(color: Colors.black),)),
                           )
                         ],
                       ),
@@ -172,7 +172,7 @@ class NotificationPage extends StatelessWidget {
                 ),
                 child: const Align(
                     alignment: Alignment.center,
-                    child: Text("see more", style: TextStyle(fontWeight: FontWeight.bold),)),
+                    child: Text("see all", style: TextStyle(fontWeight: FontWeight.bold),)),
               ),
 
               Container(

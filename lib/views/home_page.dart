@@ -1,6 +1,7 @@
 
 
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:practice/colors.dart';
 
@@ -183,12 +184,13 @@ class HomePage extends StatelessWidget {
                             ),
                             Positioned(
                                 left: 28,
-                                child: Image.network("https://cdn3.iconfinder.com/data/icons/object-emoji/50/Heart-128.png", height: 20, width: 20,)),
+                                child: CachedNetworkImage(imageUrl: "https://cdn3.iconfinder.com/data/icons/object-emoji/50/Heart-128.png", height: 20, width: 20,)),
 
                             Positioned(
                                 left: 14,
-                                child: Image.network("https://cdn4.iconfinder.com/data/icons/emoji-66/64/21-haha-512.png", height: 20, width: 20,)),
-                            Image.network("https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/199_Like_logo_logos-512.png", height: 20, width: 20, color: blue,),
+                                child: CachedNetworkImage(imageUrl: "https://cdn4.iconfinder.com/data/icons/emoji-66/64/21-haha-512.png", height: 20, width: 20,)),
+
+                            CachedNetworkImage(imageUrl: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/199_Like_logo_logos-512.png", height: 20, width: 20, color: blue,),
 
                           ],
                         ),
@@ -198,9 +200,9 @@ class HomePage extends StatelessWidget {
 
                     Row(
                       children: [
-                        Text("290 Comments", style: TextStyle(color: Colors.grey),),
+                        Text("290 comments", style: TextStyle(color: Colors.grey),),
                         SizedBox(width: 10,),
-                        Text("90 Shares ", style: TextStyle(color: Colors.grey),),
+                        Text("90 shares ", style: TextStyle(color: Colors.grey),),
                       ],
                     )
 
