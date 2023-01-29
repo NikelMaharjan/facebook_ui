@@ -11,7 +11,7 @@ class DashBoardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xffFFFFFF),
+        backgroundColor: const Color(0xffFFFFFF),
         body: SafeArea(
           child: DefaultTabController(
             length: 4,
@@ -36,12 +36,12 @@ class DashBoardPage extends StatelessWidget {
       backgroundColor: Colors.white,
       forceElevated: innerBoxScrolled,
       title: Padding(
-        padding: EdgeInsets.symmetric(vertical: 8),
+        padding: const EdgeInsets.symmetric(vertical: 8),
         child: Row(
           //crossAxisAlignment: CrossAxisAlignment.start,
           // mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Expanded(
+            const Expanded(
               child: Text(
                 "facebook",
                 style: TextStyle(fontSize: 36,
@@ -51,27 +51,27 @@ class DashBoardPage extends StatelessWidget {
             ),
             FloatingActionButton.small(
                 elevation: 0,
-                backgroundColor: Color(0xffF1F2F5),
-                child: Icon(Icons.add, color: Colors.black, size: 30,),
+                backgroundColor: const Color(0xffF1F2F5),
+                child: const Icon(Icons.add, color: Colors.black, size: 30,),
                 onPressed: () {}
             ),
 
             FloatingActionButton.small(
                 elevation: 0,
-                backgroundColor: Color(0xffF1F2F5),
-                child: Icon(Icons.search, color: Colors.black, size: 30,),
+                backgroundColor: const Color(0xffF1F2F5),
+                child: const Icon(Icons.search, color: Colors.black, size: 30,),
                 onPressed: () {}
             ),
             FloatingActionButton.small(
                 elevation: 0,
-                backgroundColor: Color(0xffF1F2F5),
-                child: Icon(Icons.message, color: Colors.black, size: 30,),
+                backgroundColor: const Color(0xffF1F2F5),
+                child: const Icon(Icons.message, color: Colors.black, size: 30,),
                 onPressed: () {}
             ),
           ],
         ),
       ),
-      bottom: TabBar(
+      bottom: const TabBar(
         indicatorColor: blue,
         unselectedLabelColor: Colors.black54,
         labelColor: blue,
@@ -102,12 +102,13 @@ class DashBoardPage extends StatelessWidget {
     return TabBarView(
       children: [
 
-        HomePage(),
+        const HomePage(),
 
-        VideoPage(),
+        const VideoPage(),
 
         NotificationPage(),
-        ProfilePage(),
+
+        const ProfilePage(),
       ],
     );
   }

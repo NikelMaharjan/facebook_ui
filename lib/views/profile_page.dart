@@ -1,6 +1,8 @@
 
 
 
+
+
 import 'package:flutter/material.dart';
 import 'package:practice/colors.dart';
 
@@ -25,7 +27,7 @@ class ProfilePage extends StatelessWidget {
                         child: Text("Menu", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),)
                     ),
                     FloatingActionButton.small(
-                        onPressed: (){},
+                      onPressed: (){},
                       elevation: 0,
                       backgroundColor: iconColor,
                       child: Icon(Icons.settings, color: Colors.black,),
@@ -71,9 +73,9 @@ class ProfilePage extends StatelessWidget {
                   ],
                 ),
                 Divider(color: Colors.grey[350],),
-                
+
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 10),
+                    margin: EdgeInsets.symmetric(vertical: 10),
                     child: Text("All Shortcuts", style: TextStyle(fontWeight: FontWeight.w600),)),
 
                 _buildShortcuts(icon1: Icons.dynamic_feed_sharp, text1: "Feeds", icon2: Icons.people, text2: "Friends" ),
@@ -88,11 +90,11 @@ class ProfilePage extends StatelessWidget {
                   height: 40,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xffE5E6EA),
+                      color: Color(0xffE5E6EA),
                       borderRadius: BorderRadius.all(Radius.circular(8))
                   ),
                   child: Align(
-                    alignment: Alignment.center,
+                      alignment: Alignment.center,
                       child: Text("See more", style: TextStyle(fontWeight: FontWeight.bold),)),
                 ),
 
@@ -153,54 +155,54 @@ class ProfilePage extends StatelessWidget {
 
   Widget _buildShortcuts({required String text1, required IconData icon1, required text2, required IconData icon2 }) {
     return Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      height: 90,
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        elevation: 4,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 18.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Icon(icon1, color: Colors.blue, size: 28,),
-                              SizedBox(height: 8,),
-                              Text(text1, style: TextStyle(fontWeight: FontWeight.w600),),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      height: 90,
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        elevation: 4,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 18.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Icon(icon2, color: Colors.blue, size: 28,),
-                              SizedBox(height: 8,),
-                              Text(text2, style: TextStyle(fontWeight: FontWeight.w600),),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              );
+      children: [
+        Expanded(
+          child: Container(
+            height: 90,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              elevation: 4,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(icon1, color: Colors.blue, size: 28,),
+                    SizedBox(height: 8,),
+                    Text(text1, style: TextStyle(fontWeight: FontWeight.w600),),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        Expanded(
+          child: Container(
+            height: 90,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              elevation: 4,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(icon2, color: Colors.blue, size: 28,),
+                    SizedBox(height: 8,),
+                    Text(text2, style: TextStyle(fontWeight: FontWeight.w600),),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }
