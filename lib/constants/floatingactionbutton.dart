@@ -8,7 +8,7 @@ class FloatingActionButtonWidget extends StatelessWidget {
   Color? color;
   double? size;
   Color? iconColor;
-  FloatingActionButtonWidget({super.key, required this.icon,  this.color});
+  FloatingActionButtonWidget({super.key, required this.icon,  this.color, this.size, this.iconColor});
 
   @override
   Widget build(BuildContext context) {
