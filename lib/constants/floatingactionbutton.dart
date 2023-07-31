@@ -12,9 +12,6 @@ class FloatingActionButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
-
     return  FloatingActionButton.small(
         elevation: 0,
         backgroundColor:  color == null ?  Color(0xffF1F2F5) : color,
