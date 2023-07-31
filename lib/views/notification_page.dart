@@ -5,6 +5,8 @@ import 'package:practice/colors.dart';
 
 
 class NotificationPage extends StatelessWidget {
+  const NotificationPage({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +24,7 @@ class NotificationPage extends StatelessWidget {
                     const Expanded(
                         child: Text("Notifications", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),)
                     ),
+
                     FloatingActionButton.small(
                       onPressed: (){},
                       elevation: 0,

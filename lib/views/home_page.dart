@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -27,14 +27,13 @@ class HomePage extends StatelessWidget {
 
                  Expanded(child: Padding(
                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                   child: Container(
+                   child: SizedBox(
                      height: 42,
                      child: TextFormField(
                          decoration:  InputDecoration(
                            contentPadding: const EdgeInsets.all(12),
                            border: OutlineInputBorder(
                              borderRadius: BorderRadius.circular(20.0),
-
                            ),
                              hintText:  "What's on Your mind?",
                              hintStyle: const TextStyle(fontSize: 14, color: Colors.black),
@@ -63,7 +62,7 @@ class HomePage extends StatelessWidget {
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               child: Container(
-                margin: EdgeInsets.only(left: 10),
+                margin: const EdgeInsets.only(left: 10),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -122,20 +121,20 @@ class HomePage extends StatelessWidget {
                 children: [
 
                   Container(
-                    margin: EdgeInsets.only(right: 10, left: 10),
-                    child: CircleAvatar(
+                    margin: const EdgeInsets.only(right: 10, left: 10),
+                    child: const CircleAvatar(
                       backgroundColor: Colors.grey,
                       radius: 22,
                     ),
                   ),
 
-                  Expanded(
+                  const Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("Doctor who", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
                         Row(
-                          children: const [
+                          children: [
                             Text("20h", style: TextStyle(fontSize: 12),),
                             SizedBox(
                               width: 4,
@@ -150,9 +149,9 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   const Icon(Icons.more_horiz_outlined),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Container(
-                      margin: EdgeInsets.symmetric(horizontal: 4),
+                      margin: const EdgeInsets.symmetric(horizontal: 4),
                       child: const Icon(Icons.close)),
                 ],
               ),
@@ -164,12 +163,12 @@ class HomePage extends StatelessWidget {
                 color: Colors.grey,
               ),
 
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
 
 
               Container(
 
-                margin: EdgeInsets.symmetric(horizontal: 10),
+                margin: const EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -194,11 +193,11 @@ class HomePage extends StatelessWidget {
 
                           ],
                         ),
-                        Text("4.1k", style: TextStyle(color: Colors.grey),)
+                        const Text("4.1k", style: TextStyle(color: Colors.grey),)
                       ],
                     ),
 
-                    Row(
+                    const Row(
                       children: [
                         Text("290 comments", style: TextStyle(color: Colors.grey),),
                         SizedBox(width: 10,),
@@ -211,12 +210,12 @@ class HomePage extends StatelessWidget {
                 ),
               ),
 
-              Divider(
+              const Divider(
                 color: Colors.grey,
               ),
 
 
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Row(

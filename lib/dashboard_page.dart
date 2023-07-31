@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practice/colors.dart';
+import 'package:practice/constants/floatingactionbutton.dart';
 import 'package:practice/views/home_page.dart';
 import 'package:practice/views/notification_page.dart';
 import 'package:practice/views/profile_page.dart';
@@ -38,8 +39,6 @@ class DashBoardPage extends StatelessWidget {
       title: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8),
         child: Row(
-          //crossAxisAlignment: CrossAxisAlignment.start,
-          // mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const Expanded(
               child: Text(
@@ -49,25 +48,9 @@ class DashBoardPage extends StatelessWidget {
                     color: Color(0xff1878F3)),
               ),
             ),
-            FloatingActionButton.small(
-                elevation: 0,
-                backgroundColor: const Color(0xffF1F2F5),
-                child: const Icon(Icons.add, color: Colors.black, size: 30,),
-                onPressed: () {}
-            ),
-
-            FloatingActionButton.small(
-                elevation: 0,
-                backgroundColor: const Color(0xffF1F2F5),
-                child: const Icon(Icons.search, color: Colors.black, size: 30,),
-                onPressed: () {}
-            ),
-            FloatingActionButton.small(
-                elevation: 0,
-                backgroundColor: const Color(0xffF1F2F5),
-                child: const Icon(Icons.message, color: Colors.black, size: 30,),
-                onPressed: () {}
-            ),
+            FloatingActionButtonWidget(icon: Icons.add),
+            FloatingActionButtonWidget(icon: Icons.search),
+            FloatingActionButtonWidget(icon: Icons.message),
           ],
         ),
       ),
@@ -98,17 +81,19 @@ class DashBoardPage extends StatelessWidget {
   }
 
 
+
+
   Widget _buildTabBarView(BuildContext context) {
-    return TabBarView(
+    return const TabBarView(
       children: [
 
-        const HomePage(),
+        HomePage(),
 
-        const VideoPage(),
+        VideoPage(),
 
         NotificationPage(),
 
-        const ProfilePage(),
+        ProfilePage(),
       ],
     );
   }

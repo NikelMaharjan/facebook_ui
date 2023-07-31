@@ -13,36 +13,36 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xffF1F2F5),
+        backgroundColor: const Color(0xffF1F2F5),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
-                    Expanded(
+                    const Expanded(
                         child: Text("Menu", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),)
                     ),
                     FloatingActionButton.small(
                       onPressed: (){},
                       elevation: 0,
                       backgroundColor: iconColor,
-                      child: Icon(Icons.settings, color: Colors.black,),
+                      child: const Icon(Icons.settings, color: Colors.black,),
                     ),
                     FloatingActionButton.small(
                       onPressed: (){},
                       elevation: 0,
                       backgroundColor: iconColor,
-                      child: Icon(Icons.search, color: Colors.black,),
+                      child: const Icon(Icons.search, color: Colors.black,),
                     )
                   ],
                 ),
-                Container(
+                SizedBox(
                   height: 50,
-                  child: Row(
+                  child: const Row(
                     children: [
                       CircleAvatar(
                         radius: 20,
@@ -62,7 +62,7 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
                 Divider(color: Colors.grey[350],),
-                Row(
+                const Row(
                   children: [
                     CircleAvatar(
                       radius: 20,
@@ -75,8 +75,8 @@ class ProfilePage extends StatelessWidget {
                 Divider(color: Colors.grey[350],),
 
                 Container(
-                    margin: EdgeInsets.symmetric(vertical: 10),
-                    child: Text("All Shortcuts", style: TextStyle(fontWeight: FontWeight.w600),)),
+                    margin: const EdgeInsets.symmetric(vertical: 10),
+                    child: const Text("All Shortcuts", style: TextStyle(fontWeight: FontWeight.w600),)),
 
                 _buildShortcuts(icon1: Icons.dynamic_feed_sharp, text1: "Feeds", icon2: Icons.people, text2: "Friends" ),
                 _buildShortcuts(icon1: Icons.groups_outlined, text1: "Groups", icon2: Icons.shop, text2: "Marketpace"),
@@ -86,14 +86,14 @@ class ProfilePage extends StatelessWidget {
 
 
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 20),
+                  margin: const EdgeInsets.symmetric(vertical: 20),
                   height: 40,
                   width: double.infinity,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: Color(0xffE5E6EA),
                       borderRadius: BorderRadius.all(Radius.circular(8))
                   ),
-                  child: Align(
+                  child: const Align(
                       alignment: Alignment.center,
                       child: Text("See more", style: TextStyle(fontWeight: FontWeight.bold),)),
                 ),
@@ -101,7 +101,7 @@ class ProfilePage extends StatelessWidget {
                 Divider(color: Colors.grey[350],),
 
 
-                ListTile(
+                const ListTile(
                   leading: Icon(Icons.handshake,),
                   minLeadingWidth: 10,
                   title: Text("Community Resources", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),),
@@ -110,7 +110,7 @@ class ProfilePage extends StatelessWidget {
 
                 Divider(color: Colors.grey[350],),
 
-                ListTile(
+                const ListTile(
                   leading: Icon(Icons.contact_support,),
                   minLeadingWidth: 10,
                   title: Text("Help & Support", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),),
@@ -119,7 +119,7 @@ class ProfilePage extends StatelessWidget {
 
                 Divider(color: Colors.grey[350],),
 
-                ListTile(
+                const ListTile(
                   leading: Icon(Icons.settings,),
                   minLeadingWidth: 10,
                   title: Text("Settings & Privacy", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),),
@@ -129,14 +129,14 @@ class ProfilePage extends StatelessWidget {
                 Divider(color: Colors.grey[350],),
 
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 20),
+                  margin: const EdgeInsets.symmetric(vertical: 20),
                   height: 40,
                   width: double.infinity,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: Color(0xffE5E6EA),
                       borderRadius: BorderRadius.all(Radius.circular(8))
                   ),
-                  child: Align(
+                  child: const Align(
                       alignment: Alignment.center,
                       child: Text("Log Out", style: TextStyle(fontWeight: FontWeight.bold),)),
                 ),
@@ -157,7 +157,7 @@ class ProfilePage extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          child: Container(
+          child: SizedBox(
             height: 90,
             child: Card(
               shape: RoundedRectangleBorder(
@@ -171,8 +171,8 @@ class ProfilePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Icon(icon1, color: Colors.blue, size: 28,),
-                    SizedBox(height: 8,),
-                    Text(text1, style: TextStyle(fontWeight: FontWeight.w600),),
+                    const SizedBox(height: 8,),
+                    Text(text1, style: const TextStyle(fontWeight: FontWeight.w600),),
                   ],
                 ),
               ),
@@ -180,7 +180,7 @@ class ProfilePage extends StatelessWidget {
           ),
         ),
         Expanded(
-          child: Container(
+          child: SizedBox(
             height: 90,
             child: Card(
               shape: RoundedRectangleBorder(
@@ -194,8 +194,8 @@ class ProfilePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Icon(icon2, color: Colors.blue, size: 28,),
-                    SizedBox(height: 8,),
-                    Text(text2, style: TextStyle(fontWeight: FontWeight.w600),),
+                    const SizedBox(height: 8,),
+                    Text(text2, style: const TextStyle(fontWeight: FontWeight.w600),),
                   ],
                 ),
               ),

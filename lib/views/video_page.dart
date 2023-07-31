@@ -28,31 +28,20 @@ class VideoPage extends StatelessWidget {
                       onPressed: (){},
                       elevation: 0,
                       backgroundColor: iconColor,
-                      child: const Icon(Icons.person, color: Colors.black,),
+                      child: const Icon(Icons.person, color: blackColor,),
                     ),
                     FloatingActionButton.small(
                       onPressed: (){},
                       elevation: 0,
                       backgroundColor: iconColor,
-                      child: const Icon(Icons.search, color: Colors.black,),
+                      child: const Icon(Icons.search, color: blackColor,),
                     )
                   ],
                 ),
               ),
 
-
               _buildStoriesFeed(),
               _buildStoriesFeed(),
-
-
-
-
-
-
-
-
-
-
 
             ],
           ),
