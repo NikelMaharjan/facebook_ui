@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:practice/colors.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,39 +39,46 @@ class ProfilePage extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(
-                  height: 50,
-                  child: const Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 20,
-                        backgroundColor: Colors.grey,
-                      ),
 
-                      SizedBox(width: 10,),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Nikel Maharjan", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
-                          Text("See your Profile", style: TextStyle(color: Colors.grey),)
-                        ],
+                SizedBox(height: 10,),
+                Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8.0),
+                    child: SizedBox(
+                      height: 50,
+                      child:  Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 20,
+                                  backgroundColor: Colors.grey,
+                                ),
+
+                                SizedBox(width: 10,),
+                                Text("Nikel Maharjan", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                              ],
+                            ),
+                            FloatingActionButton.small(
+                              onPressed: (){},
+                              elevation: 0,
+                              backgroundColor: iconColor,
+                              child:  Icon(Icons.arrow_drop_down, color: Colors.black,),
+                            )
+                          ],
+                        ),
                       ),
-                    ],
+                    ),
                   ),
                 ),
                 Divider(color: Colors.grey[350],),
-                const Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 20,
-                      backgroundColor: Colors.grey,
-                    ),
-                    SizedBox(width: 10,),
-                    Text("Meme Nepal", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
-                  ],
-                ),
-                Divider(color: Colors.grey[350],),
+
 
                 Container(
                     margin: const EdgeInsets.symmetric(vertical: 10),

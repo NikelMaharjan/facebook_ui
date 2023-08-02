@@ -2,6 +2,7 @@
 
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:practice/colors.dart';
 
@@ -66,22 +67,10 @@ class HomePage extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-
-
                     _buildStories(),
                     _buildStories(),
                     _buildStories(),
                     _buildStories(),
-
-
-
-
-
-
-
-
-
-
                   ],
                 ),
               ),
@@ -93,20 +82,8 @@ class HomePage extends StatelessWidget {
               color: const Color(0xffCACCD2),
             ),
 
-
-
             _buildNewsFeeds(),
             _buildNewsFeeds(),
-
-
-
-
-
-
-
-
-
-
 
           ],
         ),
@@ -117,47 +94,53 @@ class HomePage extends StatelessWidget {
   Column _buildNewsFeeds() {
     return Column(
             children: [
-              Row(
-                children: [
-
-                  Container(
-                    margin: const EdgeInsets.only(right: 10, left: 10),
-                    child: const CircleAvatar(
-                      backgroundColor: Colors.grey,
-                      radius: 22,
+              SizedBox(
+                height: 48,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(right: 10, left: 10),
+                      child: const CircleAvatar(
+                        backgroundColor: Colors.grey,
+                        radius: 20,
+                      ),
                     ),
-                  ),
 
-                  const Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Doctor who", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
-                        Row(
+                     const Expanded(
+                      child: SizedBox(
+                        height: 40,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Text("20h", style: TextStyle(fontSize: 12),),
-                            SizedBox(
-                              width: 4,
+                            Text("Doctor who", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
+                            Row(
+                              children: [
+                                Text("20 h", style: TextStyle(fontSize: 12),),
+                                SizedBox(
+                                  width: 4,
+                                ),
+                                Icon(
+                                  CupertinoIcons.time,
+                                  size: 12,
+                                )
+                              ],
                             ),
-                            Icon(
-                              Icons.timelapse,
-                              size: 12,
-                            )
                           ],
                         ),
-                      ],
+                      ),
                     ),
-                  ),
-                  const Icon(Icons.more_horiz_outlined),
-                  const SizedBox(width: 10,),
-                  Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 4),
-                      child: const Icon(Icons.close)),
-                ],
+                    const Icon(Icons.more_horiz_outlined),
+                    const SizedBox(width: 10,),
+                    Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 4),
+                        child: const Icon(Icons.close)),
+                  ],
+                ),
+
               ),
-              const SizedBox(
-                height: 10,
-              ),
+
               Container(
                 height: 260,
                 color: Colors.grey,
@@ -204,7 +187,6 @@ class HomePage extends StatelessWidget {
                         Text("90 shares ", style: TextStyle(color: Colors.grey),),
                       ],
                     )
-
 
                   ],
                 ),
@@ -254,7 +236,6 @@ class HomePage extends StatelessWidget {
   Widget _buildStories() {
     return Stack(
                   children: [
-
                     Container(
                       margin: const EdgeInsets.only(right: 10),
                       decoration: BoxDecoration(
@@ -284,7 +265,6 @@ class HomePage extends StatelessWidget {
                           padding: EdgeInsets.all(8.0),
                           child: Text("Nikel Maharajan",style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 14),),
                         )),
-
 
                   ],
                 );

@@ -84,15 +84,11 @@ class DashBoardPage extends StatelessWidget {
 
 
   Widget _buildTabBarView(BuildContext context) {
-    return const TabBarView(
+    return  TabBarView(
       children: [
-
         HomePage(),
-
         VideoPage(),
-
         NotificationPage(),
-
         ProfilePage(),
       ],
     );
