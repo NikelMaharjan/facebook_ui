@@ -49,11 +49,11 @@ class NotificationPage extends StatelessWidget {
                 child: Container(
                   margin: const EdgeInsets.only(top: 10, bottom: 12, right: 10, left: 10),
 
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text("People you may know", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
-                        const Icon(Icons.more_horiz_outlined),
+                      Text("People you may know", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
+                        Icon(Icons.more_horiz_outlined),
 
                     ],
                   ),
